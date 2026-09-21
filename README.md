@@ -17,24 +17,36 @@
 ![CSV](https://img.shields.io/badge/CSV-217346?style=flat-square&logo=files&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
 
-&nbsp;
-
-Programming Language: Python
-Data Sources: Mock API
-Storage: CSV files (simple, lightweight storage solution)
 
 &nbsp;
 ## 🏗️ Architecture Overview
 &nbsp;
 <img width="1602" height="521" alt="Data 101 drawio" src="https://github.com/user-attachments/assets/615446e4-59fd-4e39-b80e-a14bcc30fec4" />
 &nbsp;
-&nbsp;
+
+## 📁 Project Structure
+&nbsp;&nbsp;&nbsp;The project follows a modular Python structure, separating configuration, the main application entry point, dependencies, and reusable utility modules. The util package handles API extraction, configuration management, file tracking, and job scheduling.
+
+```text
+Data101/
+│
+├── config.ini                    # Configuration settings & API URLs
+├── main.py                       # Main entry point script
+├── requirements.txt              # Project dependencies
+├── .gitignore                    # Excludes virtual environment & secrets
+│
+└── util/                         # Helper modules package
+    ├── __init__.py               # Marks folder as a Python package
+    ├── config_handler.py          # Parses config.ini
+    ├── api_handler.py             # Extracts API data to CSV
+    ├── file_handler.py            # Tracks processed files in registry
+    └── scheduler.py               # Schedules jobs
+```      
 
 &nbsp;
 ## 📌 Conclusion
 
 This project is a great starting point for beginners, introducing fundamental concepts and tools commonly used in data engineering.
-
 &nbsp;
 
 &nbsp;
